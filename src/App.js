@@ -78,6 +78,7 @@ function App() {
       {error && <div style={{ color: "red" }}>{error}</div>}
       {response && Object.keys(response).length > 0 && (
        <div>
+        <div>
                     <h2>Result:</h2>
                     <p>User ID: {response.user_id}</p>
                     <p>Email: {response.email}</p>
@@ -96,6 +97,7 @@ function App() {
           <h3>Filtered Response</h3>
           {renderFilteredResponse()}
         </div>
+      </div>
       )}
     </div>
   );
