@@ -76,7 +76,7 @@ function App() {
         <button type="submit">Submit</button>
       </form>
       {error && <div style={{ color: "red" }}>{error}</div>}
-      {result && Object.keys(result).length > 0 && (
+      {response && Object.keys(response).length > 0 && (
         // <div>
         //   <label>Multi Filter</label>
         //   <select multiple={true} onChange={handleFilterChange}>
@@ -89,12 +89,12 @@ function App() {
         // </div>
        <div>
                     <h2>Result:</h2>
-                    <p>User ID: {result.user_id}</p>
-                    <p>Email: {result.email}</p>
-                    <p>Roll Number: {result.roll_number}</p>
-                    <p>Numbers: {result.numbers.join(', ')}</p>
-                    <p>Alphabets: {result.alphabets.join(', ')}</p>
-                    <p>Highest Lowercase Alphabet: {result.highest_lowercase_alphabet.join(', ')}</p>
+                    <p>User ID: {response.user_id}</p>
+                    <p>Email: {response.email}</p>
+                    <p>Roll Number: {response.roll_number}</p>
+                    <p>Numbers: {response.numbers.join(', ')}</p>
+                    <p>Alphabets: {response.alphabets.join(', ')}</p>
+                    <p>Highest Lowercase Alphabet: {response.highest_lowercase_alphabet.join(', ')}</p>
         </div>
       )}
     </div>
