@@ -77,15 +77,24 @@ function App() {
       </form>
       {error && <div style={{ color: "red" }}>{error}</div>}
       {response && Object.keys(response).length > 0 && (
-        <div>
-          <label>Multi Filter</label>
-          <select multiple={true} onChange={handleFilterChange}>
-            <option value="Numbers">Numbers</option>
-            <option value="Alphabets">Alphabets</option>
-            <option value="Highest lowercase alphabet">Highest lowercase alphabet</option>
-          </select>
-          <h3>Filtered Response</h3>
-          {renderFilteredResponse()}
+        // <div>
+        //   <label>Multi Filter</label>
+        //   <select multiple={true} onChange={handleFilterChange}>
+        //     <option value="Numbers">Numbers</option>
+        //     <option value="Alphabets">Alphabets</option>
+        //     <option value="Highest lowercase alphabet">Highest lowercase alphabet</option>
+        //   </select>
+        //   <h3>Filtered Response</h3>
+        //   {renderFilteredResponse()}
+        // </div>
+       <div>
+                    <h2>Result:</h2>
+                    <p>User ID: {result.user_id}</p>
+                    <p>Email: {result.email}</p>
+                    <p>Roll Number: {result.roll_number}</p>
+                    <p>Numbers: {result.numbers.join(', ')}</p>
+                    <p>Alphabets: {result.alphabets.join(', ')}</p>
+                    <p>Highest Lowercase Alphabet: {result.highest_lowercase_alphabet.join(', ')}</p>
         </div>
       )}
     </div>
