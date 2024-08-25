@@ -77,16 +77,6 @@ function App() {
       </form>
       {error && <div style={{ color: "red" }}>{error}</div>}
       {response && Object.keys(response).length > 0 && (
-        // <div>
-        //   <label>Multi Filter</label>
-        //   <select multiple={true} onChange={handleFilterChange}>
-        //     <option value="Numbers">Numbers</option>
-        //     <option value="Alphabets">Alphabets</option>
-        //     <option value="Highest lowercase alphabet">Highest lowercase alphabet</option>
-        //   </select>
-        //   <h3>Filtered Response</h3>
-        //   {renderFilteredResponse()}
-        // </div>
        <div>
                     <h2>Result:</h2>
                     <p>User ID: {response.user_id}</p>
@@ -95,6 +85,16 @@ function App() {
                     <p>Numbers: {response.numbers.join(', ')}</p>
                     <p>Alphabets: {response.alphabets.join(', ')}</p>
                     <p>Highest Lowercase Alphabet: {response.highest_lowercase_alphabet.join(', ')}</p>
+        </div>
+        <div>
+          <label>Multi Filter</label>
+          <select multiple={true} onChange={handleFilterChange}>
+            <option value="Numbers">Numbers</option>
+            <option value="Alphabets">Alphabets</option>
+            <option value="Highest lowercase alphabet">Highest lowercase alphabet</option>
+          </select>
+          <h3>Filtered Response</h3>
+          {renderFilteredResponse()}
         </div>
       )}
     </div>
