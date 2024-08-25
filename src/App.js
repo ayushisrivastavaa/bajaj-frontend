@@ -76,7 +76,7 @@ function App() {
         <button type="submit">Submit</button>
       </form>
       {error && <div style={{ color: "red" }}>{error}</div>}
-      {response && Object.keys(response).length > 0 && (
+      {result && Object.keys(result).length > 0 && (
         // <div>
         //   <label>Multi Filter</label>
         //   <select multiple={true} onChange={handleFilterChange}>
